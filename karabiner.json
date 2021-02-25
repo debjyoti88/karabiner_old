@@ -41,25 +41,9 @@
                                 "type": "basic"
                             }
                             // {
-                            //     "description": "Avoid starting sysdiagnose with the built-in macOS shortcut cmd+shift+option+ctrl+,",
+                            //     "description": "Avoid starting sysdiagnose with the built-in macOS shortcut cmd+shift+option+ctrl+ ./,/'/'"
                             //     "from": {
                             //         "key_code": "comma",
-                            //         "modifiers": {
-                            //             "mandatory": [
-                            //                 "command",
-                            //                 "shift",
-                            //                 "option",
-                            //                 "control"
-                            //             ]
-                            //         }
-                            //     },
-                            //     "to": [],
-                            //     "type": "basic"
-                            // },
-                            // {
-                            //     "description": "Avoid starting sysdiagnose with the built-in macOS shortcut cmd+shift+option+ctrl+.",
-                            //     "from": {
-                            //         "key_code": "period",
                             //         "modifiers": {
                             //             "mandatory": [
                             //                 "command",
@@ -75,7 +59,7 @@
                         ]
                     },
                     {
-                        "description": "Toggle CAPS_LOCK by pressing left_shift followed by right_shift (or, vice-versa)",
+                        "description": "Toggle CAPS_LOCK by pressing LEFT_SHIFT followed by RIGHT_SHIFT (or, vice-versa)",
                         "manipulators": [
                             {
                                 "from": {
@@ -128,7 +112,7 @@
                         ]
                     },
                     {
-                        "description": "Hyper + spacebar == Toggle Alfred",
+                        "description": "Hyper + SPACEBAR == Toggle Alfred",
                         "manipulators": [
                             {
                                 "from": {
@@ -323,7 +307,7 @@
                         ]
                     },
                     {
-                        "description": "Chrome/Safari/Finder > Use Hyper + page_up/page_down to navigate open tabs",
+                        "description": "Chrome/Safari/Finder > Use Hyper + PAGE_UP/PAGE_DOWN to navigate open tabs",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -467,7 +451,7 @@
                         ]
                     },
                     {
-                        "description": "Hyper + i/j/k/l == vim Navigation",
+                        "description": "Hyper + H/J/K/L == vim Navigation",
                         "manipulators": [
                             {
                                 "from": {
@@ -548,7 +532,7 @@
                         ]
                     },
                     {
-                        "description": "Hyper + y/u/i/o/p/[/] == Selection Shortcuts",
+                        "description": "Hyper + Y/U/I/O/P/[/] == Selection Shortcuts",
                         "manipulators": [
                             {
                                 "from": {
@@ -716,7 +700,7 @@
                         ]
                     },
                     {
-                        "description": "Hyper + backspace/return == Undo/Redo",
+                        "description": "Hyper + BACKSPACE/RETURN == Undo/Redo",
                         "manipulators": [
                             {
                                 "from": {
@@ -889,7 +873,7 @@
                         ]
                     },
                     {
-                        "description": "Hyper + e/d/m == Volume Control",
+                        "description": "Hyper + E/D/M == Volume Control",
                         "manipulators": [
                             {
                                 "from": {
@@ -951,7 +935,7 @@
                         ]
                     },
                     {
-                        "description": "Hyper + f == Toggle Full Screen",
+                        "description": "Hyper + F == Toggle Full Screen",
                         "manipulators": [
                             {
                                 "from": {
@@ -979,7 +963,7 @@
                         ]
                     },
                     {
-                        "description": "Hyper + up/down/left/right/home/end == Magnet Window Resizing",
+                        "description": "Hyper + UP/DOWN/LEFT/RIGHT/HOME/END == Magnet Window Resizing",
                         "manipulators": [
                             {
                                 "from": {
@@ -1173,7 +1157,7 @@
                         ]
                     },
                     {
-                        "description": "Hyper + del == Lock Screen",
+                        "description": "Hyper + DEL == Lock Screen",
                         "manipulators": [
                             {
                                 "from": {
@@ -1201,7 +1185,7 @@
                         ]
                     },
                     {
-                        "description": "Hyper + backslash == Copy URL",
+                        "description": "Hyper + BACKSLASH == Copy URL",
                         "manipulators": [
                             {
                                 "from": {
@@ -1234,7 +1218,7 @@
                         ]
                     },
                     {
-                        "description": "Hyper + quote == double quote",
+                        "description": "Hyper + QUOTE == Double Quote",
                         "manipulators": [
                             {
                                 "from": {
