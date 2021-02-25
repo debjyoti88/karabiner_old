@@ -935,11 +935,11 @@
                         ]
                     },
                     {
-                        "description": "Hyper + F == Toggle Full Screen",
+                        "description": "Hyper + 8 == Toggle Full Screen",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "f",
+                                    "key_code": "8",
                                     "modifiers": {
                                         "mandatory": [
                                             "left_shift",
