@@ -40,6 +40,22 @@
                                 ],
                                 "type": "basic"
                             }
+                            // {
+                            //     "description": "Avoid starting sysdiagnose with the built-in macOS shortcut cmd+shift+option+ctrl+ ./,/'/'"
+                            //     "from": {
+                            //         "key_code": "comma",
+                            //         "modifiers": {
+                            //             "mandatory": [
+                            //                 "command",
+                            //                 "shift",
+                            //                 "option",
+                            //                 "control"
+                            //             ]
+                            //         }
+                            //     },
+                            //     "to": [],
+                            //     "type": "basic"
+                            // }
                         ]
                     },
                     {
@@ -684,7 +700,7 @@
                         ]
                     },
                     {
-                        "description": "Hyper + BACKSPACE/DEL == Undo/Redo",
+                        "description": "Hyper + BACKSPACE/RETURN == Undo/Redo",
                         "manipulators": [
                             {
                                 "from": {
@@ -710,7 +726,7 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "delete_forward",
+                                    "key_code": "return_or_enter",
                                     "modifiers": {
                                         "mandatory": [
                                             "left_shift",
@@ -1141,11 +1157,11 @@
                         ]
                     },
                     {
-                        "description": "Hyper + ESC == Lock Screen",
+                        "description": "Hyper + DEL == Lock Screen",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "escape",
+                                    "key_code": "delete_forward",
                                     "modifiers": {
                                         "mandatory": [
                                             "left_shift",
@@ -1159,8 +1175,8 @@
                                     {
                                         "key_code": "q",
                                         "modifiers": [
-                                            "left_command",
-                                            "left_control"
+                                            "left_control",
+                                            "left_command"
                                         ]
                                     }
                                 ],
@@ -1202,7 +1218,7 @@
                         ]
                     },
                     {
-                        "description": "Hyper + QUOTE == Right Click",
+                        "description": "Hyper + QUOTE == Double Quote",
                         "manipulators": [
                             {
                                 "from": {
@@ -1218,7 +1234,10 @@
                                 },
                                 "to": [
                                     {
-                                        "pointing_button": "button2"
+                                        "key_code": "quote",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
