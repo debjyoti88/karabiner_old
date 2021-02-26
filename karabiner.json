@@ -1287,7 +1287,7 @@
                         ]
                     },
                     {
-                        "description": "o Launcher",
+                        "description": "0 Launcher",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -1317,7 +1317,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "o"
+                                            "key_code": "0"
                                         },
                                         {
                                             "key_code": "w"
@@ -1380,7 +1380,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "o"
+                                            "key_code": "0"
                                         },
                                         {
                                             "key_code": "f"
@@ -1443,7 +1443,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "o"
+                                            "key_code": "0"
                                         },
                                         {
                                             "key_code": "n"
@@ -1506,7 +1506,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "o"
+                                            "key_code": "0"
                                         },
                                         {
                                             "key_code": "m"
@@ -1569,7 +1569,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "o"
+                                            "key_code": "0"
                                         },
                                         {
                                             "key_code": "a"
@@ -1632,7 +1632,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "o"
+                                            "key_code": "0"
                                         },
                                         {
                                             "key_code": "c"
@@ -1695,7 +1695,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "o"
+                                            "key_code": "0"
                                         },
                                         {
                                             "key_code": "t"
@@ -1758,7 +1758,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "o"
+                                            "key_code": "0"
                                         },
                                         {
                                             "key_code": "k"
@@ -1821,7 +1821,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "o"
+                                            "key_code": "0"
                                         },
                                         {
                                             "key_code": "r"
@@ -1884,7 +1884,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "o"
+                                            "key_code": "0"
                                         },
                                         {
                                             "key_code": "s"
@@ -1947,7 +1947,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "o"
+                                            "key_code": "0"
                                         },
                                         {
                                             "key_code": "d"
