@@ -2512,7 +2512,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "right_control"
+                                    "key_code": "f"
                                 },
                                 "to": [
                                     {
