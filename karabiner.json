@@ -305,7 +305,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "page_up",
+                                    "key_code": "page_down",
                                     "modifiers": {
                                         "mandatory": [
                                             "left_shift",
@@ -337,7 +337,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "page_down",
+                                    "key_code": "page_up",
                                     "modifiers": {
                                         "mandatory": [
                                             "left_shift",
