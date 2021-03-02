@@ -291,7 +291,7 @@
                         ]
                     },
                     {
-                        "description": "Chrome/Safari/Finder > Use Hyper + PAGE_UP/PAGE_DOWN to navigate open tabs",
+                        "description": "Chrome/Safari/Finder > Use Hyper + <PAGE_UP or Q> / <PAGE_DOWN or R> to navigate open tabs",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -337,7 +337,72 @@
                                     }
                                 ],
                                 "from": {
+                                    "key_code": "r",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_shift",
+                                            "left_command",
+                                            "left_control",
+                                            "left_option"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "tab",
+                                        "modifiers": [
+                                            "left_control"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "com.google.Chrome",
+                                            "^com.apple.Safari",
+                                            "^com.apple.finder"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
                                     "key_code": "page_up",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_shift",
+                                            "left_command",
+                                            "left_control",
+                                            "left_option"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "tab",
+                                        "modifiers": [
+                                            "left_control",
+                                            "left_shift"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "com.google.Chrome",
+                                            "^com.apple.Safari",
+                                            "^com.apple.finder"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "q",
                                     "modifiers": {
                                         "mandatory": [
                                             "left_shift",
