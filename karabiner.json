@@ -709,7 +709,7 @@
                         ]
                     },
                     {
-                        "description": "Hyper + ENTER == Place cursor at end of line",
+                        "description": "Hyper + '/ENTER == Place cursor at beginning/end of line",
                         "manipulators": [
                             {
                                 "from": {
@@ -726,6 +726,28 @@
                                 "to": [
                                     {
                                         "key_code": "right_arrow",
+                                        "modifiers": [
+                                            "command"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "quote",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_shift",
+                                            "left_command",
+                                            "left_control",
+                                            "left_option"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_arrow",
                                         "modifiers": [
                                             "command"
                                         ]
