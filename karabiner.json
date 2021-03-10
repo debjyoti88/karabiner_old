@@ -1694,7 +1694,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "open -a 'terminal.app'"
+                                        "shell_command": "open -a 'telegram.app'"
                                     }
                                 ],
                                 "type": "basic"
@@ -1736,7 +1736,7 @@
                                         }
                                     },
                                     {
-                                        "shell_command": "open -a 'terminal.app'"
+                                        "shell_command": "open -a 'telegram.app'"
                                     }
                                 ],
                                 "type": "basic"
