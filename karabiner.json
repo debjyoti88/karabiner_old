@@ -629,7 +629,7 @@
                         ]
                     },
                     {
-                        "description": "Hyper + Y/U/I/O/P/[/] == Selection Shortcuts",
+                        "description": "Hyper + Y/U/I/O/P/Q/R == Selection Shortcuts",
                         "manipulators": [
                             {
                                 "from": {
@@ -750,7 +750,7 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "open_bracket",
+                                    "key_code": "q",
                                     "modifiers": {
                                         "mandatory": [
                                             "left_shift",
@@ -773,7 +773,7 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "close_bracket",
+                                    "key_code": "r",
                                     "modifiers": {
                                         "mandatory": [
                                             "left_shift",
