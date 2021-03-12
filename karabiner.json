@@ -87,58 +87,25 @@
                         ]
                     },
                     {
-                        "description": "Double tap ESCAPE to show large Digi Clock",
+                        "description": "Hold down ESCAPE to see large Digi Clock",
                         "manipulators": [
                             {
-                                "conditions": [
-                                    {
-                                        "name": "show_clock",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
                                 "from": {
                                     "key_code": "escape"
                                 },
-                                "to": [
-                                    {
-                                        "key_code": "quote",
-                                        "modifiers": "left_control"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
+                                "parameters": {
+                                    "basic.to_if_held_down_threshold_milliseconds": 250
+                                },
+                                "to_if_alone": {
                                     "key_code": "escape"
                                 },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "show_clock",
-                                            "value": 1
-                                        }
-                                    }
-                                ],
-                                "to_delayed_action": {
-                                    "to_if_canceled": [
-                                        {
-                                            "set_variable": {
-                                                "name": "show_clock",
-                                                "value": 0
-                                            }
-                                        }
-                                    ],
-                                    "to_if_invoked": [
-                                        {
-                                            "set_variable": {
-                                                "name": "show_clock",
-                                                "value": 0
-                                            }
-                                        }
+                                "to_if_held_down": {
+                                    "key_code": "quote",
+                                    "modifiers": [
+                                        "left_control"
                                     ]
                                 },
-                                "to_if_alone": [
+                                "to_after_key_up": [
                                     {
                                         "key_code": "escape"
                                     }
@@ -712,6 +679,49 @@
                                         "key_code": "left_arrow",
                                         "modifiers": [
                                             "command"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Ctrl + H/L moves Forward/Backward by 1 word",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "h",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_control"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_arrow",
+                                        "modifiers": [
+                                            "option"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "l",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_control"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_arrow",
+                                        "modifiers": [
+                                            "option"
                                         ]
                                     }
                                 ],
@@ -2582,49 +2592,6 @@
                                 "to": [
                                     {
                                         "key_code": "keypad_equal_sign"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Ctrl + H/L moves Forward/Backward by 1 word",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "h",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "left_control"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_arrow",
-                                        "modifiers": [
-                                            "option"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "l",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "left_control"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "right_arrow",
-                                        "modifiers": [
-                                            "option"
-                                        ]
                                     }
                                 ],
                                 "type": "basic"
