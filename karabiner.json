@@ -1749,7 +1749,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "c",
+                                    "key_code": "v",
                                     "modifiers": {
                                         "mandatory": []
                                     }
@@ -1771,7 +1771,7 @@
                                             "key_code": "0"
                                         },
                                         {
-                                            "key_code": "c"
+                                            "key_code": "v"
                                         }
                                     ],
                                     "simultaneous_options": {
@@ -1875,7 +1875,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "k",
+                                    "key_code": "c",
                                     "modifiers": {
                                         "mandatory": []
                                     }
@@ -1897,7 +1897,7 @@
                                             "key_code": "0"
                                         },
                                         {
-                                            "key_code": "k"
+                                            "key_code": "c"
                                         }
                                     ],
                                     "simultaneous_options": {
@@ -2071,7 +2071,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "open -a 'Microsoft To Do.app'"
+                                        "shell_command": "open -a 'Dictionary.app'"
                                     }
                                 ],
                                 "type": "basic"
@@ -2113,7 +2113,7 @@
                                         }
                                     },
                                     {
-                                        "shell_command": "open -a 'Microsoft To Do.app'"
+                                        "shell_command": "open -a 'Dictionary.app'"
                                     }
                                 ],
                                 "type": "basic"
