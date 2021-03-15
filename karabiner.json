@@ -243,6 +243,42 @@
                         ]
                     },
                     {
+                        "description": "Finder > Hyper + G == Go to Folder",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com.apple.finder"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "g",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_shift",
+                                            "left_command",
+                                            "left_control",
+                                            "left_option"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "g",
+                                        "modifiers": [
+                                            "left_command",
+                                            "left_shift"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Chrome/Safari/Finder/VSCode > Use Hyper + =/- to navigate open tabs",
                         "manipulators": [
                             {
@@ -423,7 +459,7 @@
                         ]
                     },
                     {
-                        "description": "Preview > Hyper + A/T == Toggle Markup Toolbar/Text Box; ⌘ + M == Highlight",
+                        "description": "Preview > Hyper + A/T/G == Toggle Markup Toolbar/Text Box/Go to Page; ⌘ + M == Highlight",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -510,6 +546,37 @@
                                         "modifiers": [
                                             "left_control",
                                             "left_command"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "com.apple.Preview"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "g",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_shift",
+                                            "left_command",
+                                            "left_control",
+                                            "left_option"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "g",
+                                        "modifiers": [
+                                            "left_command",
+                                            "left_option"
                                         ]
                                     }
                                 ],
