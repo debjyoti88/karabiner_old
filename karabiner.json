@@ -388,7 +388,7 @@
                         ]
                     },
                     {
-                        "description": "Chrome/Safari > option + L == Copy URL",
+                        "description": "Chrome/Safari > option + C == Copy URL",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -401,7 +401,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "l",
+                                    "key_code": "c",
                                     "modifiers": {
                                         "mandatory": [
                                             "left_option"
