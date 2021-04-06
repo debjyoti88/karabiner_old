@@ -62,7 +62,7 @@
                                 ],
                                 "to_if_alone": [
                                     {
-                                        "key_code": "right_shift"
+                                        "key_code": "delete_or_backspace"
                                     }
                                 ],
                                 "type": "basic"
@@ -80,35 +80,6 @@
                                     {
                                         "key_code": "c",
                                         "modifiers": "left_command"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "RIGHT_SHIFT alone == Backspace",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "right_shift"
-                                },
-                                "parameters": {
-                                    "basic.to_if_alone_timeout_milliseconds": 250
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "right_shift"
-                                    }
-                                ],
-                                "to_after_key_up": [
-                                    {
-                                        "key_code": "right_shift"
-                                    }
-                                ],
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "delete_or_backspace"
                                     }
                                 ],
                                 "type": "basic"
@@ -135,11 +106,6 @@
                                         "key_code": "delete_or_backspace"
                                     }
                                 ],
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "right_shift"
-                                    }
-                                ],
                                 "type": "basic"
                             }
                         ]
@@ -155,11 +121,6 @@
                                     "basic.to_if_alone_timeout_milliseconds": 250,
                                     "basic.to_if_held_down_threshold_milliseconds": 250
                                 },
-                                "to_after_key_up": [
-                                    {
-                                        "key_code": "escape"
-                                    }
-                                ],
                                 "to_if_alone": {
                                     "key_code": "escape"
                                 },
@@ -169,6 +130,11 @@
                                         "left_control"
                                     ]
                                 },
+                                "to_after_key_up": [
+                                    {
+                                        "key_code": "escape"
+                                    }
+                                ],
                                 "type": "basic"
                             }
                         ]
@@ -2530,7 +2496,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "m"
+                                    "key_code": "n"
                                 },
                                 "to": [
                                     {
@@ -2548,7 +2514,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "comma"
+                                    "key_code": "m"
                                 },
                                 "to": [
                                     {
@@ -2566,21 +2532,11 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "period"
+                                    "key_code": "comma"
                                 },
-                                "parameters": {
-                                    "basic.to_if_alone_timeout_milliseconds": 250,
-                                    "basic.to_if_held_down_threshold_milliseconds": 250
-                                },
-                                "to_if_alone": [
+                                "to": [
                                     {
                                         "key_code": "keypad_3"
-                                    }
-                                ],
-                                "to_if_held_down": [
-                                    {
-                                        "key_code": "period",
-                                        "repeat": false
                                     }
                                 ],
                                 "type": "basic"
