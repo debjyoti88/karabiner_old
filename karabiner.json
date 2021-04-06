@@ -2596,27 +2596,19 @@
                                 "from": {
                                     "key_code": "spacebar"
                                 },
-                                "to": [
+                                "parameters": {
+                                    "basic.to_if_alone_timeout_milliseconds": 250,
+                                    "basic.to_if_held_down_threshold_milliseconds": 250
+                                },
+                                "to_if_alone": [
                                     {
                                         "key_code": "keypad_0"
                                     }
                                 ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
+                                "to_if_held_down": [
                                     {
-                                        "name": "numeric_keypad_mode",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "right_shift"
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "spacebar"
+                                        "key_code": "spacebar",
+                                        "repeat": false
                                     }
                                 ],
                                 "type": "basic"
