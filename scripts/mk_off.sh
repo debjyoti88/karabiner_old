@@ -1,0 +1,1 @@
+osascript -e 'display notification "mouse keys are OFF." with title "Karabiner"'
