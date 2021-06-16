@@ -43,7 +43,39 @@
                         ]
                     },
                     {
-                        "description": "Mouse keys (modified from: xgwang.me)",
+                        "description": "hyperSE (secondary hyper key) triggered on TAB and hold",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "tab"
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "hyperSE",
+                                            "value": 1
+                                        }
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "set_variable": {
+                                            "name": "hyperSE",
+                                            "value": 0
+                                        }
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "tab"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Mouse keys (trigger: hyperSE + M)",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -51,15 +83,15 @@
                                         "name": "mouse_keys_full",
                                         "type": "variable_if",
                                         "value": 1
+                                    },
+                                    {
+                                        "name": "hyperSE",
+                                        "type": "variable_if",
+                                        "value": 1
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "m",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "left_command"
-                                        ]
-                                    }
+                                    "key_code": "m"
                                 },
                                 "to_after_key_up": [
                                     {
@@ -80,15 +112,15 @@
                                         "name": "mouse_keys_full",
                                         "type": "variable_if",
                                         "value": 0
+                                    },
+                                    {
+                                        "name": "hyperSE",
+                                        "type": "variable_if",
+                                        "value": 1
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "m",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "left_command"
-                                        ]
-                                    }
+                                    "key_code": "m"
                                 },
                                 "to_after_key_up": [
                                     {
@@ -855,7 +887,7 @@
                         ]
                     },
                     {
-                        "description": "Chrome/Safari/Finder/VSCode > Use Hyper + =/- to navigate open tabs",
+                        "description": "Chrome/Safari/Finder/VSCode > Use hyperSE + J/K to navigate open tabs",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -867,18 +899,15 @@
                                             "com.microsoft.VSCode"
                                         ],
                                         "type": "frontmost_application_if"
+                                    },
+                                    {
+                                        "name": "hyperSE",
+                                        "type": "variable_if",
+                                        "value": 1
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "equal_sign",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "left_shift",
-                                            "left_command",
-                                            "left_control",
-                                            "left_option"
-                                        ]
-                                    }
+                                    "key_code": "k"
                                 },
                                 "to": [
                                     {
@@ -900,18 +929,15 @@
                                             "com.microsoft.VSCode"
                                         ],
                                         "type": "frontmost_application_if"
+                                    },
+                                    {
+                                        "name": "hyperSE",
+                                        "type": "variable_if",
+                                        "value": 1
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "hyphen",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "left_shift",
-                                            "left_command",
-                                            "left_control",
-                                            "left_option"
-                                        ]
-                                    }
+                                    "key_code": "j"
                                 },
                                 "to": [
                                     {
@@ -1370,7 +1396,7 @@
                         ]
                     },
                     {
-                        "description": "Hyper + Y/U/I/O/P/Q/R == Selection Shortcuts",
+                        "description": "Hyper + Y/U/I/O/P/[/] == Selection Shortcuts",
                         "manipulators": [
                             {
                                 "from": {
@@ -1491,7 +1517,7 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "q",
+                                    "key_code": "open_bracket",
                                     "modifiers": {
                                         "mandatory": [
                                             "left_shift",
@@ -1514,7 +1540,7 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "r",
+                                    "key_code": "close_bracket",
                                     "modifiers": {
                                         "mandatory": [
                                             "left_shift",
@@ -1895,19 +1921,18 @@
                         ]
                     },
                     {
-                        "description": "Hyper + 9/0 == prev/next desktop",
+                        "description": "hyperSE + H/L == prev/next desktop",
                         "manipulators": [
                             {
-                                "from": {
-                                    "key_code": "9",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "left_shift",
-                                            "left_command",
-                                            "left_control",
-                                            "left_option"
-                                        ]
+                                "conditions": [
+                                    {
+                                        "name": "hyperSE",
+                                        "type": "variable_if",
+                                        "value": 1
                                     }
+                                ],
+                                "from": {
+                                    "key_code": "h"
                                 },
                                 "to": [
                                     {
@@ -1920,16 +1945,15 @@
                                 "type": "basic"
                             },
                             {
-                                "from": {
-                                    "key_code": "0",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "left_shift",
-                                            "left_command",
-                                            "left_control",
-                                            "left_option"
-                                        ]
+                                "conditions": [
+                                    {
+                                        "name": "hyperSE",
+                                        "type": "variable_if",
+                                        "value": 1
                                     }
+                                ],
+                                "from": {
+                                    "key_code": "l"
                                 },
                                 "to": [
                                     {
@@ -1944,19 +1968,18 @@
                         ]
                     },
                     {
-                        "description": "Hyper + [] == prev/next screen",
+                        "description": "hyperSE + 9/0 == prev/next screen",
                         "manipulators": [
                             {
-                                "from": {
-                                    "key_code": "open_bracket",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "left_shift",
-                                            "left_command",
-                                            "left_control",
-                                            "left_option"
-                                        ]
+                                "conditions": [
+                                    {
+                                        "name": "hyperSE",
+                                        "type": "variable_if",
+                                        "value": 1
                                     }
+                                ],
+                                "from": {
+                                    "key_code": "9"
                                 },
                                 "to": [
                                     {
@@ -1973,16 +1996,15 @@
                                 "type": "basic"
                             },
                             {
-                                "from": {
-                                    "key_code": "close_bracket",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "left_shift",
-                                            "left_command",
-                                            "left_control",
-                                            "left_option"
-                                        ]
+                                "conditions": [
+                                    {
+                                        "name": "hyperSE",
+                                        "type": "variable_if",
+                                        "value": 1
                                     }
+                                ],
+                                "from": {
+                                    "key_code": "0"
                                 },
                                 "to": [
                                     {
@@ -2824,11 +2846,11 @@
                         ]
                     },
                     {
-                        "description": "Numeric Keypad Trigger [Tab as trigger key]",
+                        "description": "Numeric Keypad Trigger [tilde ~ as trigger key]",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "tab"
+                                    "key_code": "grave_accent_and_tilde"
                                 },
                                 "to": [
                                     {
@@ -2848,7 +2870,7 @@
                                 ],
                                 "to_if_alone": [
                                     {
-                                        "key_code": "tab"
+                                        "key_code": "grave_accent_and_tilde"
                                     }
                                 ],
                                 "type": "basic"
