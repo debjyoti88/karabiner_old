@@ -1748,19 +1748,18 @@
                         ]
                     },
                     {
-                        "description": "Hyper + W == Toggle Full Screen",
+                        "description": "hyperSE + W == Toggle Full Screen",
                         "manipulators": [
                             {
-                                "from": {
-                                    "key_code": "w",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "left_shift",
-                                            "left_command",
-                                            "left_control",
-                                            "left_option"
-                                        ]
+                                "conditions": [
+                                    {
+                                        "name": "hyperSE",
+                                        "type": "variable_if",
+                                        "value": 1
                                     }
+                                ],
+                                "from": {
+                                    "key_code": "w"
                                 },
                                 "to": [
                                     {
