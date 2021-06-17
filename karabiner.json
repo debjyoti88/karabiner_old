@@ -887,7 +887,7 @@
                         ]
                     },
                     {
-                        "description": "Chrome/Safari/Finder/VSCode > Use hyperSE + J/K to navigate open tabs",
+                        "description": "Chrome/Safari/Finder/VSCode > Use hyperSE + Q/R to navigate open tabs",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -907,7 +907,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "k"
+                                    "key_code": "r"
                                 },
                                 "to": [
                                     {
@@ -937,7 +937,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "j"
+                                    "key_code": "q"
                                 },
                                 "to": [
                                     {
