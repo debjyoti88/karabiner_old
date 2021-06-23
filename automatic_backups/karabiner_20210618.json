@@ -844,9 +844,6 @@
                                             "left_command",
                                             "left_option"
                                         ]
-                                    },
-                                    {
-                                        "shell_command": "afplay ~/Library/Sounds/cut_sound_1.aiff"
                                     }
                                 ],
                                 "type": "basic"
@@ -3339,7 +3336,7 @@
                     ]
                 }
             ],
-            "name": "Default",
+            "name": "Default profile",
             "parameters": {
                 "delay_milliseconds_before_open_device": 1000
             },
