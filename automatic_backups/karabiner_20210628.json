@@ -1187,30 +1187,6 @@
                         ]
                     },
                     {
-                        "description": "Powerpoint > Map the 'End' key to right_arrow key",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "com.microsoft.Powerpoint"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "end"
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "right_arrow"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "Hyper + H/J/K/L == vim Navigation",
                         "manipulators": [
                             {
