@@ -1504,11 +1504,11 @@
                         ]
                     },
                     {
-                        "description": "Hyper + Y/U/I/O/P/Q/R == Selection Shortcuts",
+                        "description": "Selection Mode [Hyper + F as trigger]",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "y",
+                                    "key_code": "f",
                                     "modifiers": {
                                         "mandatory": [
                                             "left_shift",
@@ -1517,6 +1517,45 @@
                                             "left_option"
                                         ]
                                     }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "selection_mode",
+                                            "value": 1
+                                        }
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "set_variable": {
+                                            "name": "selection_mode",
+                                            "value": 0
+                                        }
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "f"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Hyper + Y/U/I/O/P/Q/R == Selection Shortcuts",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "selection_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "h"
                                 },
                                 "to": [
                                     {
@@ -3002,11 +3041,11 @@
                         ]
                     },
                     {
-                        "description": "Numeric Keypad Trigger [~ (tilde) as trigger key]",
+                        "description": "Numeric Keypad Trigger [z ~ as trigger key]",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "grave_accent_and_tilde"
+                                    "key_code": "z"
                                 },
                                 "to": [
                                     {
@@ -3026,7 +3065,7 @@
                                 ],
                                 "to_if_alone": [
                                     {
-                                        "key_code": "grave_accent_and_tilde"
+                                        "key_code": "z"
                                     }
                                 ],
                                 "type": "basic"
