@@ -43,7 +43,7 @@
                         ]
                     },
                     {
-                        "description": "hyperSE (secondary hyper key) triggered on TAB and hold",
+                        "description": "hyperSE (secondary hyper key) triggered on TAB and hold; alone => navigate to right open tab (Chrome/Finder/VSCode/Safari)",
                         "manipulators": [
                             {
                                 "from": {
@@ -67,7 +67,10 @@
                                 ],
                                 "to_if_alone": [
                                     {
-                                        "key_code": "tab"
+                                        "key_code": "tab",
+                                        "modifiers": [
+                                            "left_control"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
@@ -75,7 +78,43 @@
                         ]
                     },
                     {
-                        "description": "LEFT_SHIFT alone to Chrome > Search open tabs; LEFT_SHIFT + RIGHT_SHIFT to Esc",
+                        "description": "hyperSE + RIGHT_SHIFT == Navigate to Left Open Tab",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "com.google.Chrome",
+                                            "^com.apple.Safari",
+                                            "^com.apple.finder",
+                                            "com.microsoft.VSCode"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    },
+                                    {
+                                        "name": "hyperSE",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "right_shift"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "tab",
+                                        "modifiers": [
+                                            "left_control",
+                                            "left_shift"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "LEFT_SHIFT + RIGHT_SHIFT to Chrome > Search open tabs",
                         "manipulators": [
                             {
                                 "from": {
@@ -88,27 +127,6 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "escape"
-                                    }
-                                ],
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "right_shift"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "left_shift"
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_shift"
-                                    }
-                                ],
-                                "to_if_alone": [
-                                    {
                                         "key_code": "a",
                                         "modifiers": [
                                             "left_command",
@@ -116,30 +134,6 @@
                                         ]
                                     }
                                 ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "RIGHT_SHIFT alone == Do Nothing",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "right_shift"
-                                },
-                                "parameters": {
-                                    "basic.to_if_alone_timeout_milliseconds": 250
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "right_shift"
-                                    }
-                                ],
-                                "to_after_key_up": [
-                                    {
-                                        "key_code": "right_shift"
-                                    }
-                                ],
                                 "to_if_alone": [
                                     {
                                         "key_code": "right_shift"
@@ -150,7 +144,7 @@
                         ]
                     },
                     {
-                        "description": "Hyper + RIGHT_SHIFT == Backspace",
+                        "description": "Hyper + RIGHT_SHIFT == Escape",
                         "manipulators": [
                             {
                                 "from": {
@@ -166,7 +160,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "delete_or_backspace"
+                                        "key_code": "escape"
                                     }
                                 ],
                                 "to_if_alone": [
@@ -375,49 +369,10 @@
                         ]
                     },
                     {
-                        "description": "Chrome/Safari/Finder/VSCode > Use hyperSE + J/K to navigate open tabs",
+                        "description": "hyperSE + J/K => Mission Control",
                         "manipulators": [
                             {
                                 "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "com.google.Chrome",
-                                            "^com.apple.Safari",
-                                            "^com.apple.finder",
-                                            "com.microsoft.VSCode"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    },
-                                    {
-                                        "name": "hyperSE",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "k"
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "tab",
-                                        "modifiers": [
-                                            "left_control"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "com.google.Chrome",
-                                            "^com.apple.Safari",
-                                            "^com.apple.finder",
-                                            "com.microsoft.VSCode"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    },
                                     {
                                         "name": "hyperSE",
                                         "type": "variable_if",
@@ -429,10 +384,30 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "tab",
+                                        "key_code": "up_arrow",
                                         "modifiers": [
-                                            "left_control",
-                                            "left_shift"
+                                            "left_control"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyperSE",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "k"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "up_arrow",
+                                        "modifiers": [
+                                            "left_control"
                                         ]
                                     }
                                 ],
@@ -1406,6 +1381,33 @@
                                 "to": [
                                     {
                                         "key_code": "f",
+                                        "modifiers": [
+                                            "left_control",
+                                            "left_command"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "hyperSE + Spacebar == Emoji Pane",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyperSE",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "spacebar"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "spacebar",
                                         "modifiers": [
                                             "left_control",
                                             "left_command"
