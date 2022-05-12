@@ -369,7 +369,7 @@
                         ]
                     },
                     {
-                        "description": "hyperSE + J/K => Mission Control",
+                        "description": "hyperSE + R => Mission Control",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -380,28 +380,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "j"
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "up_arrow",
-                                        "modifiers": [
-                                            "left_control"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyperSE",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "k"
+                                    "key_code": "r"
                                 },
                                 "to": [
                                     {
@@ -1659,6 +1638,53 @@
                                     },
                                     {
                                         "pointing_button": "button1"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "hyperSE + 1/4 == Zoom Out/In",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyperSE",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "1"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "hyphen",
+                                        "modifiers": [
+                                            "left_command"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyperSE",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "4"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "equal_sign",
+                                        "modifiers": [
+                                            "left_command"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
