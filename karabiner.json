@@ -98,7 +98,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "right_shift"
+                                    "key_code": "left_shift"
                                 },
                                 "to": [
                                     {
@@ -369,29 +369,8 @@
                         ]
                     },
                     {
-                        "description": "hyperSE + R/J/K => Mission Control",
+                        "description": "hyperSE + J/K => Mission Control",
                         "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyperSE",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "r"
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "up_arrow",
-                                        "modifiers": [
-                                            "left_control"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
                             {
                                 "conditions": [
                                     {
@@ -430,6 +409,47 @@
                                         "modifiers": [
                                             "left_control"
                                         ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "hyperSE + Q/R => Left/Right",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyperSE",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "q"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_arrow"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyperSE",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "r"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_arrow"
                                     }
                                 ],
                                 "type": "basic"
